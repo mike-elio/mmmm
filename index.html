@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>اكتشف مدينتنا - موقع سياحي بسيط</title>
+  <meta name="description" content="موقع سياحي تجريبي من صفحتين للعرض والاختبار." />
+  <style>
+    :root {
+      --bg:#0f172a;      /* slate-900 */
+      --card:#111827;    /* gray-900 */
+      --muted:#94a3b8;   /* slate-400 */
+      --accent:#22c55e;  /* green-500 */
+      --accent-2:#38bdf8;/* sky-400 */
+      --text:#e5e7eb;    /* gray-200 */
+      --text-strong:#ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      background: radial-gradient(80% 120% at 80% 0%, #0b1026 0%, var(--bg) 40%, #0a0f23 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    header {
+      backdrop-filter: blur(8px);
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid #1f2937;
+      background: rgba(15,23,42,.6);
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+    .nav {
+      display:flex; align-items:center; justify-content:space-between; padding: 12px 0;
+    }
+    .brand { display:flex; gap:10px; align-items:center; font-weight:700; color:var(--text-strong); }
+    .brand .logo {
+      width:34px; height:34px; border-radius:10px; background:
+      conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2), #a78bfa, var(--accent));
+      box-shadow: 0 0 24px rgba(56,189,248,.35);
+    }
+    .nav a { margin-left: 12px; padding: 6px 10px; border-radius: 10px; }
+    .nav a.active, .nav a:hover { background: #0b1226; color: var(--text-strong); }
+    .hero {
+      padding: 56px 0 32px;
+      display:grid; gap:16px;
+    }
+    .title {
+      font-size: clamp(28px, 5vw, 42px); font-weight:800; color: var(--text-strong);
+    }
+    .subtitle { color: var(--muted); max-width: 60ch; }
+    .cta { display:flex; gap:12px; margin-top: 10px; flex-wrap: wrap; }
+    .btn {
+      display:inline-flex; align-items:center; gap:8px; padding: 10px 14px; border-radius: 12px;
+      font-weight:600; border: 1px solid #243246; background:#0b1226; color:var(--text-strong);
+      transition: transform .08s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), #16a34a); border-color: transparent; color:#05120a; }
+    .grid {
+      display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      background: linear-gradient(180deg, #0b1226, #0a0f1f);
+      border: 1px solid #1e293b; border-radius: 16px; padding: 16px;
+      box-shadow: 0 10px 30px rgba(2,6,23,.35) inset;
+      min-height: 160px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 18px; color: var(--text-strong); }
+    .card p { margin: 0; color: var(--muted); }
+    .badge { display:inline-block; font-size: 12px; padding: 4px 8px; border-radius: 999px; background:#0e1726; border:1px solid #1f2a3a; color:#9dd3ff; }
+    .img {
+      border-radius: 14px; border:1px solid #1f2a3a; width:100%; aspect-ratio: 16/9;
+      background: linear-gradient(120deg, #0f172a, #0b1226);
+      display:grid; place-items:center; color:#6481a7; font-weight:600;
+    }
+    footer { border-top:1px solid #1f2937; margin-top: 28px; }
+    footer .inner { padding: 18px 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+    .small { font-size: 12px; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container nav" aria-label="التنقل الرئيسي">
+      <div class="brand"><span class="logo" aria-hidden="true"></span><span>اكتشف مدينتنا</span></div>
+      <div>
+        <a href="index.html" class="active" aria-current="page">الرئيسية</a>
+        <a href="attractions.html">المعالم</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="title">مرحباً بك في دليل السياحة البسيط</h1>
+      <p class="subtitle">هذا نموذج من صفحتين يمكنك رفعه مباشرةً. صُمّم بخفة وسرعة، مع دعم كامل للغة العربية واتجاه الكتابة من اليمين إلى اليسار.</p>
+      <div class="cta">
+        <a class="btn primary" href="attractions.html">استكشف المعالم</a>
+        <a class="btn" href="#contact">تواصل معنا</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="why">
+      <h2 id="why" class="title" style="font-size:26px;">لماذا تزور مدينتنا؟</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="badge">تاريخ</span>
+          <h3>أزقة قديمة</h3>
+          <p>شوارع ضيقة تحكي قصص تجار ورحّالة مرّوا من هنا عبر القرون.</p>
+        </article>
+        <article class="card">
+          <span class="badge">طبيعة</span>
+          <h3>واجهة بحرية</h3>
+          <p>إطلالات هادئة عند الغروب ومسارات مشي مناسبة للعائلات.</p>
+        </article>
+        <article class="card">
+          <span class="badge">طعام</span>
+          <h3>مأكولات محلية</h3>
+          <p>تشكيلة من الأطباق التقليدية الطازجة في الأسواق الشعبية.</p>
+        </article>
+        <article class="card">
+          <span class="badge">فعاليات</span>
+          <h3>مهرجانات سنوية</h3>
+          <p>حفلات موسيقية ومعارض حرفية تُضفي طاقة خاصة طوال العام.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="gallery" style="margin-top:22px;">
+      <h2 id="gallery" class="title" style="font-size:26px;">صور سريعة</h2>
+      <div class="grid">
+        <div class="img">صورة ١ (ضع صورتك هنا)</div>
+        <div class="img">صورة ٢</div>
+        <div class="img">صورة ٣</div>
+        <div class="img">صورة ٤</div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title" style="margin-top:22px;">
+      <h2 id="contact-title" class="title" style="font-size:26px;">تواصل</h2>
+      <form class="card" style="display:grid; gap:10px;" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك (نموذج تجريبي)');">
+        <label>الاسم
+          <input required type="text" name="name" placeholder="اسمك" style="width:100%; padding:10px; border-radius:10px; border:1px solid #28405f; background:#0b1226; color:var(--text);" />
+        </label>
+        <label>البريد الإلكتروني
+          <input required type="email" name="email" placeholder="you@example.com" style="width:100%; padding:10px; border-radius:10px; border:1px solid #28405f; background:#0b1226; color:var(--text);" />
+        </label>
+        <label>رسالتك
+          <textarea required rows="4" name="message" placeholder="نص الرسالة" style="width:100%; padding:10px; border-radius:10px; border:1px solid #28405f; background:#0b1226; color:var(--text);"></textarea>
+        </label>
+        <button class="btn primary" type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container inner">
+      <span class="small">نسخة تجريبية • HTML فقط • جاهزة للرفع</span>
+      <span class="small">© 2025</span>
+    </div>
+  </footer>
+</body>
+</html>

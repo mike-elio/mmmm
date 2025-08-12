@@ -1,0 +1,4 @@
+# ignoe all file with .txt
+*.txt
+
+!vip.log

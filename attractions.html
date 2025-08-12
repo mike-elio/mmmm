@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>المعالم - اكتشف مدينتنا</title>
+  <meta name="description" content="قائمة مختصرة بأهم المعالم مع معلومات سريعة." />
+  <style>
+    :root {
+      --bg:#0f172a; --card:#111827; --muted:#94a3b8; --accent:#22c55e; --accent-2:#38bdf8; --text:#e5e7eb; --text-strong:#ffffff;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      background: radial-gradient(80% 120% at 80% 0%, #0b1026 0%, var(--bg) 40%, #0a0f23 100%); color: var(--text); line-height: 1.7; }
+    a { color: var(--accent-2); text-decoration: none; }
+    header { backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #1f2937; background: rgba(15,23,42,.6); }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding: 12px 0; }
+    .brand { display:flex; gap:10px; align-items:center; font-weight:700; color:var(--text-strong); }
+    .brand .logo { width:34px; height:34px; border-radius:10px; background: conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2), #a78bfa, var(--accent)); box-shadow: 0 0 24px rgba(56,189,248,.35); }
+    .nav a { margin-left: 12px; padding: 6px 10px; border-radius: 10px; }
+    .nav a.active, .nav a:hover { background: #0b1226; color: var(--text-strong); }
+    .title { font-size: clamp(26px, 5vw, 36px); font-weight:800; color: var(--text-strong); margin: 26px 0 10px; }
+    .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background: linear-gradient(180deg, #0b1226, #0a0f1f); border:1px solid #1e293b; border-radius:16px; padding:16px; box-shadow: 0 10px 30px rgba(2,6,23,.35) inset; }
+    .card h3 { margin:0 0 6px; color: var(--text-strong); font-size: 18px; }
+    .meta { font-size: 12px; color: #9dd3ff; }
+    .desc { margin:8px 0 0; color: var(--muted); }
+    .back { display:inline-flex; align-items:center; gap:8px; margin: 18px 0; padding: 8px 12px; border-radius: 10px; background:#0b1226; border:1px solid #1f2a3a; color:var(--text-strong); }
+    footer { border-top:1px solid #1f2937; margin-top: 28px; }
+    footer .inner { padding: 18px 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
+    .small { font-size: 12px; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container nav" aria-label="التنقل الرئيسي">
+      <div class="brand"><span class="logo" aria-hidden="true"></span><span>اكتشف مدينتنا</span></div>
+      <div>
+        <a href="index.html">الرئيسية</a>
+        <a href="attractions.html" class="active" aria-current="page">المعالم</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="title">أبرز المعالم</h1>
+    <div class="grid" role="list">
+      <article class="card" role="listitem">
+        <h3>المدينة القديمة</h3>
+        <div class="meta">وقت الزيارة المقترح: 2–3 ساعات</div>
+        <p class="desc">ممرات تاريخية وأسواق تقليدية؛ مكان مثالي لالتقاط الصور وشراء التذكارات.</p>
+      </article>
+      <article class="card" role="listitem">
+        <h3>المتحف الوطني</h3>
+        <div class="meta">رسوم دخول رمزية</div>
+        <p class="desc">معروضات أثرية وحرفية محلية تروي تاريخ المنطقة من عصور مختلفة.</p>
+      </article>
+      <article class="card" role="listitem">
+        <h3>الكورنيش البحري</h3>
+        <div class="meta">أفضل وقت: الغروب</div>
+        <p class="desc">مسارات مشي طويلة ومقاهي مطلة على البحر لوقت هادئ ومميز.</p>
+      </article>
+      <article class="card" role="listitem">
+        <h3>حديقة التلال</h3>
+        <div class="meta">عائلي • مناطق لعب</div>
+        <p class="desc">مساحات خضراء واسعة ومسار قصير للمشي مع نقاط إطلالة على المدينة.</p>
+      </article>
+    </div>
+
+    <a class="back" href="index.html">⬅ العودة إلى الرئيسية</a>
+  </main>
+
+  <footer>
+    <div class="container inner">
+      <span class="small">نسخة تجريبية • HTML فقط • جاهزة للرفع</span>
+      <span class="small">© 2025</span>
+    </div>
+  </footer>
+</body>
+</html>
